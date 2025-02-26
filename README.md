@@ -18,11 +18,19 @@
 
 ## Installation
 1. Ensure you have **MATLAB** installed.
-2. Download the latest release from the [Releases](https://github.com/asanchezlc/OSP-SAP) section.
-3. Install the MATLAB App:
+2. Download the latest release from [Github](https://github.com/asanchezlc/OSP-SAP).
+3. The GUI can be **directly run** by executing the following file:  
+   **`Run_Interface.m`**  
+
+   Alternatively, if you prefer, you can **install the app** as described below:
    - Open MATLAB and navigate to the downloaded `OSP_SAP.mlappinstall` file.
-   - Double-click the file or use the `matlab.apputil.install` command.
-4. Open MATLAB and launch **OSP-SAP** from the App Manager.
+   - **Double-click** the file, or use the following command in MATLAB:
+     ```matlab
+     matlab.apputil.install('OSP_SAP.mlappinstall')
+     ```
+   - **Launch the app** from the **App Manager** in MATLAB.
+
+
 
 ## Usage
 1. Load a **SAP2000** finite element model in `.xls` format.
