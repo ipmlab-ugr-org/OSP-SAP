@@ -1,0 +1,17 @@
+
+
+%% Run the chosen OSP algorithm
+MOD1 = MOD(dof_setup,sel_modes);
+LISTA_GRL1 = LISTA_GRL_tot(dof_setup,:);
+
+c1 = strcmp('EFI',method);
+c2 = strcmp('KEMRO',method);
+c3 = strcmp('SEMRO',method);
+c4 = strcmp('EFIWM',method);
+
+if c1 == 1
+    EFI_Method
+else
+    KEMRO_SEMRO_EFIWM_Method
+end
+
