@@ -1,6 +1,8 @@
 %% Run_Interface.m
 % Main which is executed to run the OSP-SAP interface
 
+% OSP-SAP: A MATLAB graphical user interface for optimal sensor placement using SAP2000
+
 %%
 clear
 clc
