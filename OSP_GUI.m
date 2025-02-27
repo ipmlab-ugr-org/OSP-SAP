@@ -71,28 +71,28 @@ p = mfilename('fullpath');
 k = strfind(p,'\OSP_GUI');
 filename=[p(1:k-1) '\Logos\XYZ_axes.jpg'];
 [X,map] = imread(filename);
-X=imresize(X, [20 15]);
+X=imresize(X, [15 15]);
 set(handles.pushbutton16, 'CData', X);
 
 p = mfilename('fullpath');
 k = strfind(p,'\OSP_GUI');
 filename=[p(1:k-1) '\Logos\XY_axes.jpg'];
 [X,map] = imread(filename);
-X=imresize(X, [20 15]);
+X=imresize(X, [15 15]);
 set(handles.pushbutton17, 'CData', X);
 
 p = mfilename('fullpath');
 k = strfind(p,'\OSP_GUI');
 filename=[p(1:k-1) '\Logos\XZ_axes.jpg'];
 [X,map] = imread(filename);
-X=imresize(X, [20 15]);
+X=imresize(X, [15 15]);
 set(handles.pushbutton18, 'CData', X);
 
 p = mfilename('fullpath');
 k = strfind(p,'\OSP_GUI');
 filename=[p(1:k-1) '\Logos\YZ_axes.jpg'];
 [X,map] = imread(filename);
-X=imresize(X, [20 15]);
+X=imresize(X, [15 15]);
 set(handles.pushbutton19, 'CData', X);
 
 

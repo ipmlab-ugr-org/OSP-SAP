@@ -42,7 +42,7 @@
 ## Citation [to be included!]
 If you use **OSP-SAP** in your research, please cite:
 
-<!-- @article{yourcitation, author = {Your Name and Co-Authors}, title = {OSP-SAP: A MATLAB module and software for Optimal Sensor Placement in SAP2000}, journal = {SoftwareX}, year = {2024}, doi = {your-doi} } -->
+@article{yourcitation, author = {López-Cuervo, Antonio S. and Garc\'{i}a-Mac\'{i}as, Enrique and Castro-Triguero, Rafael and Chiach\'{i}o-Ruano, Juan}, title = {OSP-SAP: A MATLAB graphical user interface for optimal sensor placement using SAP2000}, journal = {SoftwareX}, year = {2025}, doi = {--} } -->
 
 ## License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.

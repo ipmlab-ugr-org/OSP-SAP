@@ -1,12 +1,12 @@
 
 
  SAP2000 v23.3.1 Ultimate 64-bit (Analysis Build 9871/64)
- File: C:\Users\Usuario\Docume..._CODES\OSP-SAP\Examples\log\Base_model_iter.LOG
+ File: C:\Users\Enrique\Docume...P\Examples\Case_Study_I\log\Base_model_iter.LOG
 
 
 
 
- B E G I N   A N A L Y S I S                                2025/02/26  14:10:38
+ B E G I N   A N A L Y S I S                                2025/02/27  11:52:09
 
 
  RUNNING ANALYSIS WITHIN THE GUI PROCESS
@@ -19,24 +19,24 @@
  NUMBER OF ACCELERATION LOADS              =           9
  NUMBER OF LOAD CASES                      =           1
 
- ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.919 GB
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.208 GB
 
  PARALLELIZATION OF ANALYSIS OPERATIONS:
   (Env. variable SAPFIRE_NUM_THREADS not set)
- NUMBER OF THREADS: STATE (AUTOMATIC)      =           2
- NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           2
- NUMBER OF THREADS: EVENT (AUTOMATIC)      =           2
- NUMBER OF THREADS: MOVE (AUTOMATIC)       =           2
- NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           2
- NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           2
- NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           8
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           8
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           8
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           8
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           8
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           8
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           8
 
 
- E L E M E N T   F O R M A T I O N                                      14:10:38
+ E L E M E N T   F O R M A T I O N                                      11:52:09
 
 
 
- L I N E A R   E Q U A T I O N   S O L U T I O N                        14:10:38
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        11:52:09
 
  FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
@@ -53,7 +53,7 @@
  ---------------------------------
 
 
- E I G E N   M O D A L   A N A L Y S I S                                14:10:38
+ E I G E N   M O D A L   A N A L Y S I S                                11:52:09
 
  CASE: MODAL
 
@@ -74,6 +74,10 @@
 
  Original stiffness at shift : EV= 0.0000000E+00, f=     .000000, T=  -INFINITY-
  Number of eigenvalues below shift =      0
+
+ Iteration    Approximations to next 5 eigenvalues, from shift EV= 0.0000000E+00
+       3   7.9525833E+03 7.9525833E+03 7.9525833E+03 3.0253488E+04 4.8557049E+04
+
  Found mode      1 of     12:  EV= 7.9525833E+03, f=   14.193001, T=    0.070457
  Found mode      2 of     12:  EV= 7.9525833E+03, f=   14.193001, T=    0.070457
  Found mode      3 of     12:  EV= 7.9525833E+03, f=   14.193001, T=    0.070457
@@ -92,4 +96,4 @@
  NUMBER OF STIFFNESS SHIFTS                =           0
 
 
- A N A L Y S I S   C O M P L E T E                          2025/02/26  14:10:38
+ A N A L Y S I S   C O M P L E T E                          2025/02/27  11:52:09
