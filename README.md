@@ -18,7 +18,7 @@
 
 ## Installation
 1. Ensure you have **MATLAB** installed.
-2. Download the latest release from [Github](https://github.com/asanchezlc/OSP-SAP).
+2. Download the latest release from [GitHub](https://github.com/asanchezlc/OSP-SAP).
 3. The GUI can be **directly run** by executing the following file:  
    **`Run_Interface.m`**  
 
