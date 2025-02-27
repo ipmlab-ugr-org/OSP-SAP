@@ -1,3 +1,6 @@
+# log folders inside examples (unuseful files)
+# Examples/**/log/
+
 # Plot_Mode_Shapes.m function
 Utils/OSP_GUI_utils/Plot_Mode_Shapes.m
 
