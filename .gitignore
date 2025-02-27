@@ -1,5 +1,25 @@
 # log folders inside examples (unuseful files)
-# Examples/**/log/
+Examples/**/log/
+
+# SAP2000 files different to sdb
+*.ico
+*.$2k
+*.K_0
+*.K_I
+*.K_J
+*.K_M
+*.LOG
+*.msh
+*.OUT
+*.Y
+*.Y$$
+*.Y_1
+*.Y00
+*.Y01
+*.Y02
+*.Y03
+*.Y04
+*.Y05
 
 # Plot_Mode_Shapes.m function
 Utils/OSP_GUI_utils/Plot_Mode_Shapes.m
