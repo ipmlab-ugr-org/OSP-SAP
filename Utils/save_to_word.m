@@ -382,7 +382,7 @@ selection.Font.Underline = false;
 % Insert figure
 [fig, ax] = plot_MAC_1(mac_OSP, annot_kws, modes_number);
 baseFileName = 'MAC_OSP'; % Define the file name for the saved figure
-figFile = [baseFileName, '.png']
+figFile = [baseFileName, '.png'];
 saveas(fig, fullfile(save_path,figFile)); % Save the figure as a PNG file in the current folder
 selection.InlineShapes.AddPicture(fullfile(save_path, figFile)); % Insert the image
 close(fig);
@@ -396,7 +396,7 @@ selection.Font.Underline = false;
 
 [fig, ax] = plot_MAC_1(mac_model, annot_kws, modes_number);
 baseFileName = 'MAC_Full'; % Define the file name for the saved figure
-figFile = [baseFileName, '.png']
+figFile = [baseFileName, '.png'];
 saveas(fig, fullfile(save_path,figFile)); % Save the figure as a PNG file in the current folder
 selection.InlineShapes.AddPicture(fullfile(save_path, figFile)); % Insert the image
 close(fig);
