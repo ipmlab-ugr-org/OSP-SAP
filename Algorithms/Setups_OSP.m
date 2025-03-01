@@ -1,5 +1,6 @@
 
 %% Run the chosen OSP algorithm
+MOD = PROJECT_OSP.modalprop.Mode_shape;
 MOD1 = MOD(dof_setup,sel_modes); % select only target dofs and target modes
 [bool,index_dof_setup] = ismember(dof_setup,dofs_matrix);
 LISTA_GRL1 = LISTA_GRL(index_dof_setup,:);
