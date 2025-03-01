@@ -1,4 +1,4 @@
-function [dof_setup,nodes_setup,dir_setup] = dof_conv_2(setup_nodes, sensors_GRL_tot)
+function [dof_setup,nodes_setup,dir_setup] = get_dof_setup(setup_nodes, sensors_GRL_tot, dofs_matrix)
 % FUNCTION DUTIES:
 % Given setup_nodes (the nodes considered for this case),and sensors_GRL_tot
 % (variable indicating the target DOFs for all nodes in the structure),
@@ -13,17 +13,24 @@ function [dof_setup,nodes_setup,dir_setup] = dof_conv_2(setup_nodes, sensors_GRL
 %   sensors_GRL_tot - Matrix of size (target_dofs * N x 4)
 %       - Column 1: Nodes names
 %       - Columns 2-4: [1,0,0], [0,1,0] or [0,0,1], depending on the DOF
+%       - Remark: target_dofs <= 3
+%
+%   dofs_matrix - Matrix of size (target_dofs * N x 4)
+%       - Column 1: DOFs names
+%       - Columns 2-4: [1,0,0], [0,1,0] or [0,0,1], depending on the DOF
+%       - Remark: target_dofs <= 3
+%
 %   Remark:
 %       - n2: number of candidates (global or setup)
 %       - N: total number of nodes in the structure
-%       - target_dofs * N: total number of dofs in the structure
-%       - target_dofs * n2: total number of dofs in this specific OSP problem
+%       - target_dofs * N: total number of target dofs in the structure
+%       - target_dofs * n2: total number of target dofs in this specific OSP problem
 %       - target_dofs: number of target_DOFS (e.g. 2 if Uy and Uz)
 %
 % OUTPUT:
 %   dof_setup - Vector of size (1 x n_target_dofs*n2):
 %       - Contains the DOF numbers associated with each element in setup_nodes.
-%       - Each DOF number is between 1 and 3*N.
+%       - Each DOF number is between 1 and 3*N (even if only having Uz as target dir, for instance).
 %
 %   nodes_setup - Vector of size (1 x n_target_dofs*n2):
 %       - Contains the names of the nodes to which each DOF in dof_setup belongs.
@@ -39,30 +46,34 @@ function [dof_setup,nodes_setup,dir_setup] = dof_conv_2(setup_nodes, sensors_GRL
 %           - 2 ? U2 (y-direction)
 %           - 3 ? U3 (z-direction)
 
-%% Retrieve the dof_setup variable
-indexes = cell(size(setup_nodes,1),1);
-for i = 1:size(setup_nodes,1)
-    indexes{i} = find(sensors_GRL_tot(:,1) == setup_nodes(i));
+%% Retrieve dof_setup
+indices_cell = cell(size(setup_nodes,1), 1);
+for i = 1:size(setup_nodes, 1)
+    node_value = setup_nodes(i,1); % Get the current node value
+    indices_cell{i} = find(sensors_GRL_tot(:,1) == node_value); % Find all matching indices
 end
-dof_setup_aux = horzcat(indexes{:});
-dof_setup = [];
-for i=1:size(dof_setup_aux,2)
-    dof_setup = [dof_setup, dof_setup_aux(:, i).'];
+indices_aux = horzcat(indices_cell{:});
+indices = [];
+for i=1:size(indices_aux,2)
+    indices = [indices, indices_aux(:, i).'];
 end
+dof_setup = dofs_matrix(indices,1).';
 
-%% Retrieve the dir_setup variable
+%% Retrieve nodes_setup
+nodes_setup = sensors_GRL_tot(indices,1).';
+
+%% Retrieve dir_setup
 dir_setup = zeros(1,length(dof_setup));
-for i=1:size(dof_setup,2)
-    if sensors_GRL_tot(dof_setup(i),2:4) == [1, 0, 0]
+for i=1:length(dof_setup)
+    dof = dof_setup(i);
+    [bool,index] = ismember(dof, dofs_matrix(:,1));
+    if dofs_matrix(index,2:4) == [1, 0, 0]
         dir_setup(i) = 1;
-    elseif sensors_GRL_tot(dof_setup(i),2:4) == [0, 1, 0]
+    elseif dofs_matrix(index,2:4) == [0, 1, 0]
         dir_setup(i) = 2;
-    else
+    elseif dofs_matrix(index,2:4) == [0, 0, 1]
         dir_setup(i) = 3;
     end    
 end
-
-%% Retrieve the nodes_setup variable
-nodes_setup = sensors_GRL_tot(dof_setup,1).';
 
 end
