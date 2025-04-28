@@ -25,7 +25,7 @@ not_tracked
 *.Y05
 
 # Plot_Mode_Shapes.m function
-src/Utils/OSP_GUI_utils/Plot_Mode_Shapes.m
+src/Utils/OSP_GUI_utils/Plot_Mode_Shape_OSP.m
 
 # Opened microsoft files
 ~$*
@@ -55,6 +55,9 @@ codegen/
 
 # Simulink autosave extension
 *.autosave
+
+# vs
+.vs/
 
 # Simulink cache files
 *.slxc
