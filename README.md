@@ -46,6 +46,8 @@
 ## 📜 Citation
 If you use **OSP-SAP** in your research, please cite:
 
+▶ **Archived at Zenodo**: [https://doi.org/10.5281/zenodo.15046076](https://doi.org/10.5281/zenodo.15046076)
+
 ```bibtex
 @article{yourcitation, author = {L\'{o}pez-Cuervo, Antonio S. and Garc\'{i}a-Mac\'{i}as, Enrique and Castro-Triguero, Rafael and Chiach\'{i}o-Ruano, Juan}, title = {OSP-SAP: A MATLAB graphical user interface for optimal sensor placement using SAP2000}, journal = {SoftwareX}, year = {2025}, doi = {--} }
 ```
