@@ -2,6 +2,8 @@
 
 **OSP-SAP** is a MATLAB-based Graphical User Interface (GUI) designed for **Optimal Sensor Placement (OSP)** in **SAP2000** finite element models. The software integrates four optimization algorithms to determine the best sensor locations for **Operational Modal Analysis (OMA)**, ensuring efficient structural monitoring.
 
+📖 **[Read the full paper here](https://www.sciencedirect.com/science/article/pii/S2352711025001839)** 
+
 ![OSP-SAP Layout](docs/images/footbridge.PNG)
 
 ## 🚀 Features
@@ -47,7 +49,7 @@
 If you use **OSP-SAP** in your research, please cite:
 
 ```bibtex
-@article{yourcitation, author = {L\'{o}pez-Cuervo, Antonio S. and Garc\'{i}a-Mac\'{i}as, Enrique and Castro-Triguero, Rafael and Chiach\'{i}o-Ruano, Juan}, title = {OSP-SAP: A MATLAB graphical user interface for optimal sensor placement using SAP2000}, journal = {SoftwareX}, year = {2025}, doi = {https://doi.org/10.1016/j.softx.2025.102216} }
+@article{yourcitation, author = {L\'{o}pez-Cuervo, Antonio S. and Garc\'{i}a-Mac\'{i}as, Enrique and Castro-Triguero, Rafael and Chiach\'{i}o, Juan}, title = {OSP-SAP: A MATLAB graphical user interface for optimal sensor placement using SAP2000}, journal = {SoftwareX}, year = {2025}, doi = {https://doi.org/10.1016/j.softx.2025.102216} }
 ```
 
 ▶ **Archived at Zenodo**: [https://doi.org/10.5281/zenodo.15046076](https://doi.org/10.5281/zenodo.15046076)
